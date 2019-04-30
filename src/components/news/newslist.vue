@@ -1,14 +1,14 @@
 <template>
     <div>
        <ul class="mui-table-view">
-            <li class="mui-table-view-cell mui-media">
+            <li class="mui-table-view-cell mui-media" v-for='i in newslist' :key='i.id'>
                 <a href="javascript:;">
-                    <img class="mui-media-object mui-pull-left" src="../../images/menu2.png">
+                    <img class="mui-media-object mui-pull-left" :src='i.img_url'>
                     <div class="mui-media-body">
-                        <h2>幸福</h2>
+                        <h2>{{i.title}}</h2>
                         <p class='mui-ellipsis'>
-                            <span>时间:12-12-12 12:12:12</span>
-                            <span>人数:0</span>
+                            <span>时间:{{i.add_time | timeformat('YYYY-MM-DD hh:mm:ss')}}</span>
+                            <span>人数:{{i.click}}</span>
                         </p>
                     </div>
                 </a>
@@ -27,8 +27,11 @@ export default {
     },
     methods:{
         getlists(){
-            this.$http.get('/app/getnewslists').then(res=>{
-                console.log(res)
+            this.$http.get('/api/getnewslist').then(res=>{
+                if(res.status==200&&res.data.status==0){
+                    this.newslist = res.data.message
+                }
+                
             })
         }
     }

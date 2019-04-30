@@ -20,6 +20,7 @@
         "babel-preset-stage-0": "^6.24.1",
         "jquery": "^3.4.0",
         "mint-ui": "^2.2.13",
+        "moment": "^2.24.0",
         "vue": "^2.6.10",
         "vue-router": "^3.0.6",
         "webpack-dev-server": "^3.3.1"

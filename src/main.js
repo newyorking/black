@@ -20,6 +20,12 @@ import './lib/mui/css/icons-extra.css'
 import app from './app.vue'
 import router from './router'
 
+import moment from 'moment'
+Vue.filter('timeformat', function(time, patten = '') {
+    return moment(time).format(patten)
+})
+
+
 new Vue({
     // el: '#app',
     render: c => c(app),

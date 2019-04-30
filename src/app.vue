@@ -40,6 +40,7 @@ export default {
 <style lang="scss" scope>
     .app{
         padding-top:40px;
+        padding-bottom:50px;
         height: 2000px;
         overflow-x: hidden;
     }
