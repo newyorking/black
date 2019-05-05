@@ -12,6 +12,8 @@ import member from './components/tabbar/member.vue'
 import shopcar from './components/tabbar/shopcar.vue'
 import search from './components/tabbar/search.vue'
 import news from './components/news/newslist.vue'
+import newsinfo from './components/news/newsinfo.vue'
+import photolist from './components/photos/photoList.vue'
 
 const router = new VueRouter({
     routes: [
@@ -19,7 +21,9 @@ const router = new VueRouter({
         { path: '/member', component: member },
         { path: '/shopcar', component: shopcar },
         { path: '/search', component: search },
-        { path: '/home/news', component: news }
+        { path: '/home/news', component: news },
+        { path: '/home/newsinfo/:id', component: newsinfo },
+        { path: '/home/photolist', component: photolist },
     ],
     linkActiveClass: 'mui-active',
 })
