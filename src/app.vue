@@ -38,10 +38,13 @@ export default {
 </script>
 
 <style lang="scss" scope>
+    .mint-header-title{
+        z-index: 99;
+    }
     .app{
         padding-top:40px;
         padding-bottom:50px;
-        height: 2000px;
+        // height: 2000px;
         overflow-x: hidden;
     }
     .v-enter{

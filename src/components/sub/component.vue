@@ -34,7 +34,7 @@ export default {
                 // console.log(res);
                 if(res.status==200&&res.data.status==0){
                     this.comments = this.comments.concat(res.data.message)
-                    console.log(this.comments)
+                    // console.log(this.comments)
                 }else{
                     Toast('sorry')
                 }

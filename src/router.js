@@ -14,6 +14,9 @@ import search from './components/tabbar/search.vue'
 import news from './components/news/newslist.vue'
 import newsinfo from './components/news/newsinfo.vue'
 import photolist from './components/photos/photoList.vue'
+import photoDetail from './components/photos/photoDetail.vue'
+import goodsList from './components/goods/goodsList.vue'
+import goodsDetail from './components/goods/goodsDetail.vue'
 
 const router = new VueRouter({
     routes: [
@@ -24,6 +27,9 @@ const router = new VueRouter({
         { path: '/home/news', component: news },
         { path: '/home/newsinfo/:id', component: newsinfo },
         { path: '/home/photolist', component: photolist },
+        { path: '/home/photoDetail/:id', component: photoDetail },
+        { path: '/home/goodsList/', component: goodsList },
+        { path: '/home/goodsDetail/:id', component: goodsDetail },
     ],
     linkActiveClass: 'mui-active',
 })
